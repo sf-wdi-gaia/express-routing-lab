@@ -37,19 +37,18 @@ router.route('/:id').get(function(req,res){
       }
     }
     res.json({message : 'deleted' });
-  });
-
-//Update a candy
-router.put('/:id/edit', function(req, res) {
-  for(var i in candies){
-    if(candies[i]["id"] == req.params.id){
-      candies[i] = req.body;
+  })
+  //Update a candy
+  .put(function(req, res) {
+    for(var i in candies){
+      if(candies[i]["id"] == req.params.id){
+        candies[i] = req.body;
+      }
     }
-  }
-  res.format({
-    json: function(){ res.json(req.body); }
+    res.format({
+      json: function(){ res.json(req.body); }
+    });
   });
-});
 
 
 module.exports = router;
