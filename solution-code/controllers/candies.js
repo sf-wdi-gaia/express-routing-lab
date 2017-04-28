@@ -42,7 +42,7 @@ router.route('/:id').get(function(req,res){
   .put(function(req, res) {
     for(var i in candies){
       if(candies[i]["id"] == req.params.id){
-        candies[i] = req.body;
+        candies[i] = {id:candies[i]["id"], name:req.body.name, color:req.body.color}
       }
     }
     res.format({
