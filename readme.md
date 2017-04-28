@@ -13,7 +13,7 @@ A kid has come to you with an idea for an API to keep track of his candies.  You
 - Create an Express app from scratch
 - This app will only respond to JSON; it is just an API, so don't worry about the views
 - The resource `Candy` should be accessible via the endpoint `/candies` and be RESTful
-- Implement `index`,`show`, `create`, `update`, and `destory` functionality
+- Implement `index`,`show`, `create`, `update`, and `destroy` functionality
 
 **Bonus:**
 - Handle wrong responses with appropriate HTTP status and responses (404, 500, 422)
